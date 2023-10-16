@@ -18,6 +18,7 @@ body {
   background-repeat: repeat-x;
   background-position: top;
   font-family: "Tahoma", sans-serif;
+  background-color: #f1f1f1 !important;
 }
 .container h1 {
   display: inline-block;
