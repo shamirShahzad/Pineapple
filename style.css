@@ -1,36 +1,12 @@
 body {
-  background: url(./Pics/background.jpg);
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 13px;
+  line-height: 1.7em;
+  background-color: #f1f1f1;
+  background-image: url(images/templatemo_body.jpg);
   background-repeat: repeat-x;
   background-position: top;
-}
-#wrapper {
-  width: 960px;
-  padding: 0px 10px;
-  margin: 0 auto;
-}
-#site-title {
-  float: left;
-}
-#site-title h1 a {
-  background: url(./Pics/templatemo_logo.png) no-repeat;
-}
-header {
-  color: #333;
-  font-size: 2rem;
-  font-weight: normal;
-  background-color: blue;
-}
-header img {
-  position: relative;
-  width: 13%;
-  display: inline-block;
-  left: 0;
-  top: 0;
-  margin: 0;
-  padding: 0;
-}
-header h1 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
 }
