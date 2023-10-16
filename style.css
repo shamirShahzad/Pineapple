@@ -1,12 +1,129 @@
-body {
-  margin: 0;
+:root {
+  --grey-font: (color: #616161;);
+}
+* {
+  box-sizing: border-box;
   padding: 0;
-  color: #000;
-  font-family: Tahoma, Geneva, sans-serif;
-  font-size: 13px;
-  line-height: 1.7em;
-  background-color: #f1f1f1;
-  background-image: url(images/templatemo_body.jpg);
+  margin: 0;
+  /* outline: 1px solid black; */
+}
+body {
+  background: url(./Pics/background.jpg);
   background-repeat: repeat-x;
   background-position: top;
+}
+.container h1 {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-top: 10px;
+  color: #5b5b5b;
+  margin-left: 0.75rem;
+}
+.container img {
+  margin-left: 3.8rem;
+  margin-bottom: 10px;
+}
+nav {
+  background-color: #ebce4e;
+}
+.search {
+  position: relative;
+}
+.navbar-brand {
+  color: #746522;
+}
+.navbar-toggler-icon {
+  border: 1px solid #746522;
+}
+.nav-link {
+  color: #746522 !important;
+}
+.form-flex {
+  display: flex;
+}
+.form-search-bar {
+  position: relative;
+  flex-grow: 2;
+  border: none;
+  outline: none;
+  background: url(./Pics/search-bar.png) left top no-repeat;
+  color: white;
+}
+.form-search-bar::placeholder {
+  color: white;
+  font-size: 1rem;
+  padding-left: 3px;
+}
+.form-search-bar:focus {
+  outline: none;
+}
+.form-flex:focus-within {
+  outline: none;
+}
+.form-btn {
+  padding: 10px;
+  position: sticky;
+  right: 130px;
+  top: 20px;
+  background: none;
+  border: none;
+}
+@media (min-width: 675px) {
+  .container h1 {
+    display: inline-block;
+    text-align: center;
+    font-size: 2.9rem;
+    font-weight: 600;
+    padding-top: 10px;
+    color: #5b5b5b;
+    margin-left: 0.75rem;
+  }
+  .container img {
+    margin-left: 3.8rem;
+    margin-bottom: 20px;
+  }
+  .first-navitem {
+    margin-left: 3rem;
+  }
+  nav {
+    background: none;
+  }
+  .nav-height {
+    height: 70px;
+  }
+  .navbar-brand {
+    color: #746522;
+    visibility: hidden;
+  }
+  .nav-item {
+    margin-right: 10px;
+  }
+  .form-search-bar {
+    position: relative;
+    flex-grow: 2;
+    border: none;
+    bottom: 10px;
+    outline: none;
+    background: url(./Pics/search-bar.png) right top no-repeat;
+    color: white;
+  }
+  .form-btn {
+    padding: 10px;
+    position: absolute;
+    right: 17px;
+    top: 15px;
+    background: none;
+    border: none;
+  }
+  nav ul li a {
+    height: 70px;
+    width: 94px;
+    text-align: center;
+  }
+  nav ul li a:hover,
+  nav ul li a.first-navitem {
+    background: url(./Pics/hover_menu.png) top center no-repeat;
+  }
 }
