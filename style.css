@@ -11,7 +11,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  outline: 1px solid black;
+  /* outline: 1px solid black; */
 }
 body {
   background: url(./Pics/background.jpg);
@@ -40,9 +40,6 @@ nav {
 }
 .navbar-brand {
   color: #746522;
-}
-.navbar-toggler-icon {
-  border: 1px solid #746522;
 }
 .nav-link {
   color: #746522 !important;
@@ -146,10 +143,81 @@ nav {
   margin-right: 70px;
 }
 .footer {
-  background: url(./Pics/footer.jpg);
-  background-repeat: repeat-x;
-  background-position: top;
+  background: url(./Pics/footer-repeat.jpg) repeat-y;
+  width: 100%;
+  background-color: #d2b533;
 }
+.footer-repeat {
+  position: relative;
+  top: 30px;
+  overflow: hidden;
+  width: 960px;
+  padding: 40px 0 0;
+  margin: 0 auto;
+  color: #746522;
+  background: url(Pics/footer.jpg) bottom center repeat-y;
+  background-color: #d2b533;
+}
+.footer-title {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.footer-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.footer-flex a {
+  align-self: self-start;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: block;
+  color: #84652b;
+  text-decoration: none;
+}
+.footer-flex a:hover {
+  color: rgb(161, 22, 22);
+}
+.flex-row {
+  display: flex;
+  justify-content: start;
+}
+.icons {
+  width: 35px;
+  height: 35px;
+}
+.branding p {
+  font-size: 0.75rem;
+  color: white;
+}
+.branding p a {
+  text-decoration: none;
+  color: white;
+}
+.branding p a:hover {
+  text-decoration: underline;
+}
+.links ul {
+  display: flex;
+  justify-content: space-evenly;
+  float: right;
+}
+.links ul li {
+  list-style: none;
+}
+.links ul li a {
+  font-size: 0.75rem;
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+.links ul li a:hover {
+  color: #f9b613;
+  text-decoration: underline;
+}
+
 @media (min-width: 675px) {
   .container h1 {
     display: inline-block;
@@ -228,5 +296,43 @@ nav {
   }
   .block p {
     font-size: 0.75rem;
+  }
+  .footer {
+  }
+  .branding p {
+    font-size: 0.75rem;
+    color: white;
+  }
+  .branding p a {
+    text-decoration: none;
+    color: white;
+  }
+  .branding p a:hover {
+    text-decoration: underline;
+  }
+  .links {
+    position: relative;
+    width: 100%;
+    background-color: blue;
+    right: 0;
+    bottom: 0;
+  }
+  .links ul {
+    display: flex;
+    justify-content: space-evenly;
+    float: right;
+  }
+  .links ul li {
+    list-style: none;
+  }
+  .links ul li a {
+    font-size: 0.75rem;
+    color: white;
+    text-decoration: none;
+    margin-right: 60px;
+    margin-left: 10px;
+  }
+  .links ul li a:hover {
+    color: #bb8800;
   }
 }
