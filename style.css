@@ -131,6 +131,8 @@ nav {
 .block i {
   margin-left: 15px;
   color: #bb8800;
+  display: inline-block;
+  margin-top: 20px;
 }
 .block i:hover {
   color: red;
@@ -141,6 +143,12 @@ nav {
   margin-left: 15px;
   color: black;
   margin-top: 4px;
+  margin-right: 70px;
+}
+.footer {
+  background: url(./Pics/footer.jpg);
+  background-repeat: repeat-x;
+  background-position: top;
 }
 @media (min-width: 675px) {
   .container h1 {
