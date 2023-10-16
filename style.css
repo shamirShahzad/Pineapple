@@ -1,16 +1,23 @@
 :root {
   --grey-font: (color: #616161;);
 }
+@font-face {
+  font-family: "Tahoma";
+  src: url(./Fonts/Tahoma\ Regular\ font.ttf);
+  src: url(./Fonts/TAHOMAB0.TTF);
+  src: url(Fonts/TAHOMABD.TTF);
+}
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  /* outline: 1px solid black; */
+  outline: 1px solid black;
 }
 body {
   background: url(./Pics/background.jpg);
   background-repeat: repeat-x;
   background-position: top;
+  font-family: "Tahoma", sans-serif;
 }
 .container h1 {
   display: inline-block;
@@ -70,6 +77,71 @@ nav {
   background: none;
   border: none;
 }
+
+.main-title {
+  margin-top: 2rem;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+.main-text {
+  font-size: smaller;
+  color: black;
+}
+.main-text span {
+  color: #bb8800;
+}
+.main-text span:hover {
+  cursor: pointer;
+  color: red;
+  text-decoration: underline;
+}
+.main-btn {
+  width: 138px;
+  height: 33px;
+  color: white;
+  background: url(./Pics/Button.png);
+}
+.main-btn p {
+  margin-top: 2px;
+  margin-left: 30px;
+  font-weight: 600;
+}
+.main-line {
+  border: 1px dashed #ccc;
+}
+.main-title-2 {
+  color: #b57b22;
+  margin-top: 2rem;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+.main-img {
+  width: 280px;
+  height: 125px;
+  background: url(Pics/frame.png) top center no-repeat;
+  z-index: 100;
+  margin-top: 10px;
+}
+.main-img img {
+  position: relative;
+  top: 20px;
+  right: 36px;
+}
+.block i {
+  margin-left: 15px;
+  color: #bb8800;
+}
+.block i:hover {
+  color: red;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.block p {
+  margin-left: 15px;
+  color: black;
+  margin-top: 4px;
+}
 @media (min-width: 675px) {
   .container h1 {
     display: inline-block;
@@ -83,6 +155,9 @@ nav {
   .container img {
     margin-left: 3.8rem;
     margin-bottom: 20px;
+  }
+  .start-margin {
+    margin: 0 auto !important;
   }
   .first-navitem {
     margin-left: 3rem;
@@ -108,11 +183,12 @@ nav {
     outline: none;
     background: url(./Pics/search-bar.png) right top no-repeat;
     color: white;
+    margin-right: 4.85rem;
   }
   .form-btn {
     padding: 10px;
     position: absolute;
-    right: 17px;
+    right: 99px;
     top: 15px;
     background: none;
     border: none;
@@ -125,5 +201,24 @@ nav {
   nav ul li a:hover,
   nav ul li a.first-navitem {
     background: url(./Pics/hover_menu.png) top center no-repeat;
+  }
+  .main-title {
+    margin-left: 3.725rem;
+  }
+  .main-text {
+    margin-left: 3.725rem;
+  }
+  .main-btn {
+    margin-top: 30px;
+  }
+  .main-btn p {
+    margin-left: 30px;
+    margin-top: 2px;
+  }
+  .main-title-2 {
+    margin-left: 3.725rem;
+  }
+  .block p {
+    font-size: 0.75rem;
   }
 }
