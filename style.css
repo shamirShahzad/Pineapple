@@ -53,8 +53,9 @@ nav {
   background: url(./Pics/search-bar.png) left top no-repeat;
   color: white;
 }
-nav ul li a:hover {
-  background-color: #746522;
+nav ul li a:hover,
+nav ul li a .first-navitem {
+  background-color: rgb(224, 196, 32);
 }
 .form-search-bar::placeholder {
   color: white;
