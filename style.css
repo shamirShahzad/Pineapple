@@ -4,8 +4,6 @@
 @font-face {
   font-family: "Tahoma";
   src: url(./Fonts/Tahoma\ Regular\ font.ttf);
-  src: url(./Fonts/TAHOMAB0.TTF);
-  src: url(Fonts/TAHOMABD.TTF);
 }
 * {
   box-sizing: border-box;
@@ -30,7 +28,6 @@ body {
   margin-left: 0.75rem;
 }
 .container img {
-  margin-left: 3.8rem;
   margin-bottom: 10px;
 }
 nav {
@@ -58,7 +55,8 @@ nav {
 }
 .form-search-bar::placeholder {
   color: white;
-  font-size: 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
   padding-left: 3px;
 }
 .form-search-bar:focus {
@@ -99,6 +97,7 @@ nav {
   height: 33px;
   color: white;
   background: url(./Pics/Button.png);
+  margin-top: 20px;
 }
 .main-btn p {
   margin-top: 2px;
@@ -125,12 +124,18 @@ nav {
   position: relative;
   top: 20px;
   right: 36px;
+  margin-left: 3.725rem;
+}
+.block {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  margin-bottom: 20px;
 }
 .block i {
   margin-left: 15px;
   color: #bb8800;
-  display: inline-block;
+  display: block;
   margin-top: 20px;
+  text-align: center;
 }
 .block i:hover {
   color: red;
@@ -142,83 +147,110 @@ nav {
   color: black;
   margin-top: 4px;
   margin-right: 70px;
+  text-align: center;
 }
-.footer {
-  background: url(./Pics/footer-repeat.jpg) repeat-y;
+footer {
+  background: url(Pics/footer-repeat.jpg) bottom center repeat-x;
+  height: 434px;
   width: 100%;
-  background-color: #d2b533;
+  background-color: #9b8315;
 }
 .footer-repeat {
-  position: relative;
-  top: 30px;
-  overflow: hidden;
-  width: 960px;
-  padding: 40px 0 0;
+  background: url(./Pics/footer.jpg) top center repeat;
+  height: fit-content;
+  width: 100%;
+  padding: 50px;
   margin: 0 auto;
-  color: #746522;
-  background: url(Pics/footer.jpg) bottom center repeat-y;
-  background-color: #d2b533;
 }
 .footer-title {
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin-bottom: 30px;
+  color: #746522;
+  margin-bottom: 20px;
+  font-size: 1.75rem;
+  font-family: "Tahoma", sans-serif;
+  font-weight: normal;
+}
+.flex-links {
+  display: flex;
+  flex-direction: column;
+}
+.flex-links a {
+  color: #746522;
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.flex-links a:hover {
+  color: #cc0000;
+  text-decoration: underline;
+}
+.footer-blocks {
+  margin-bottom: 10px;
+}
+.footer-blocks p {
+  color: #746522;
+  font-size: 13px;
 }
 .footer-flex {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
 }
-.footer-flex a {
-  align-self: self-start;
-  margin-top: 5px;
-  margin-bottom: 5px;
+.footer-flex .c1 a {
+  margin-right: 1.1rem;
   display: block;
-  color: #84652b;
-  text-decoration: none;
-}
-.footer-flex a:hover {
-  color: rgb(161, 22, 22);
-}
-.flex-row {
-  display: flex;
-  justify-content: start;
-}
-.icons {
   width: 35px;
   height: 35px;
+  background: url(Pics/twitter.png) center no-repeat;
 }
-.branding p {
-  font-size: 0.75rem;
+.footer-flex .c2 a {
+  display: block;
+  width: 35px;
+  height: 35px;
+  background: url(Pics/rss.png) center no-repeat;
+}
+.copyright {
+  color: #fff2b9;
+  font-size: 13px;
+}
+.copyright a {
   color: white;
-}
-.branding p a {
   text-decoration: none;
-  color: white;
 }
-.branding p a:hover {
+.copyright a:hover {
+  color: white;
   text-decoration: underline;
+}
+.links {
+  display: flex;
+  justify-content: start;
+  color: #fff2b9;
+  font-size: 13px;
 }
 .links ul {
+  width: 100%;
+  flex-grow: 1;
   display: flex;
-  justify-content: space-evenly;
-  float: right;
+  justify-content: start;
+  align-items: center;
+  padding: 0;
+}
+.links p {
+  flex-grow: 0;
 }
 .links ul li {
+  display: block;
   list-style: none;
+  margin-right: 5px;
 }
 .links ul li a {
-  font-size: 0.75rem;
+  display: block;
   color: white;
   text-decoration: none;
-  margin-right: 10px;
 }
 .links ul li a:hover {
-  color: #f9b613;
+  color: white;
   text-decoration: underline;
 }
-
 @media (min-width: 675px) {
   .container h1 {
     display: inline-block;
@@ -237,7 +269,7 @@ nav {
     margin: 0 auto !important;
   }
   .first-navitem {
-    margin-left: 3rem;
+    margin-left: 2.6rem;
   }
   nav {
     background: none;
@@ -257,6 +289,7 @@ nav {
     flex-grow: 2;
     border: none;
     bottom: 10px;
+    right: 5px;
     outline: none;
     background: url(./Pics/search-bar.png) right top no-repeat;
     color: white;
@@ -285,8 +318,20 @@ nav {
   .main-text {
     margin-left: 3.725rem;
   }
+  .main-line {
+    margin-left: 55px;
+  }
+  main div .start-margin {
+    position: relative;
+    margin-left: 3.725rem;
+    height: 50px;
+    width: 100%;
+  }
   .main-btn {
-    margin-top: 30px;
+    margin-top: 700px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
   }
   .main-btn p {
     margin-left: 30px;
@@ -295,45 +340,83 @@ nav {
   .main-title-2 {
     margin-left: 3.725rem;
   }
+  .row-flex-container {
+    width: 20%;
+  }
+  .row-flex {
+    display: flex;
+    justify-content: space-between !important;
+  }
+  .block-c1 {
+    margin-left: 3.725rem;
+  }
+  .block .main-img {
+    position: relative;
+    left: -17px;
+  }
+  .block i {
+    text-align: left;
+    display: inline-block;
+  }
   .block p {
+    text-align: left;
     font-size: 0.75rem;
   }
-  .footer {
+  footer {
+    background: url(Pics/footer-repeat.jpg) top repeat-x;
+    height: 434px;
+    width: 100%;
+    background-color: #9b8315;
   }
-  .branding p {
-    font-size: 0.75rem;
+  .footer-repeat {
+    background: url(./Pics/footer.jpg) bottom center no-repeat;
+    height: 347px;
+    width: 100%;
+    padding: 50px;
+    margin: 0 auto;
+  }
+  .footer-blocks-c1 {
+    margin-left: 3.725rem;
+  }
+  .copyright {
+    color: #fff2b9;
+    font-size: 13px;
+    margin-left: 3.725rem;
+  }
+  .copyright a {
     color: white;
-  }
-  .branding p a {
     text-decoration: none;
-    color: white;
   }
-  .branding p a:hover {
+  .copyright a:hover {
+    color: white;
     text-decoration: underline;
   }
   .links {
-    position: relative;
-    width: 100%;
-    background-color: blue;
-    right: 0;
-    bottom: 0;
+    display: flex;
+    color: #fff2b9;
+    font-size: 13px;
+    margin-left: 3.725rem;
   }
   .links ul {
+    width: 50%;
     display: flex;
-    justify-content: space-evenly;
-    float: right;
+    flex-grow: 0;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+  .links p {
+    flex-grow: 10;
+    margin-bottom: 0;
   }
   .links ul li {
     list-style: none;
   }
   .links ul li a {
-    font-size: 0.75rem;
     color: white;
     text-decoration: none;
-    margin-right: 60px;
-    margin-left: 10px;
   }
   .links ul li a:hover {
-    color: #bb8800;
+    color: white;
+    text-decoration: underline;
   }
 }
